@@ -1,0 +1,9 @@
+* {
+    padding: 0;
+    margin: 0;
+    border: none;
+    outline: none;
+    box-sizing: border-box;
+    line-height: 100%;
+    font-family: system-ui, sans-serif;
+}
