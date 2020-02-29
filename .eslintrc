@@ -1,0 +1,18 @@
+{
+	"parserOptions": {
+		"ecmaVersion": 2018,
+		"sourceType": "module"
+	},
+	"env": {
+		"browser": true,
+		"es6": true
+	},
+	"extends": "eslint:recommended",
+	"rules": {
+		"no-console": "off",
+		"eqeqeq": "error",
+		"no-undef": "error",
+		"no-var": "error",
+		"no-unused-vars": "warn"
+	}
+}
