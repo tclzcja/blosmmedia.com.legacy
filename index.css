@@ -5,6 +5,7 @@
 	outline: none;
 	box-sizing: content-box;
 	line-height: 100%;
+	scrollbar-width: none;
 }
 :root {
 	font-size: 16px;
@@ -15,6 +16,10 @@
 	--padding: 100px;
 	--padding-half: calc(var(--padding) / 2);
 	--padding-quarter: calc(var(--padding) / 4);
+}
+::-webkit-scrollbar {
+	height: 0;
+	width: 0;
 }
 a {
 	color: inherit;
@@ -30,6 +35,11 @@ h1 {
 h2 {
 	font-size: 1.5rem;
 	color: rgb(255, 218, 128);
+}
+object {
+	height: 100%;
+	width: 100%;
+	pointer-events: none;
 }
 /* */
 html, body {
@@ -49,7 +59,7 @@ body.off>* {
 	opacity: 0;
 	transform: translateY(-10rem);
 }
-body>nav {
+body>header {
 	padding-top: var(--padding);
 	display: flex;
 	flex-direction: column;
@@ -58,7 +68,7 @@ body>nav {
 	position: relative;
 	z-index: 100;
 }
-body>nav:after {
+body>header:after {
 	position: absolute;
 	top: 100%;
 	left: 0;
@@ -70,20 +80,20 @@ body>nav:after {
 	border-right: solid 50vw transparent;
 	border-top: solid var(--padding) #333;
 }
-body>nav>object {
+body>header>object {
 	margin-bottom: var(--padding-half);
 	height: 12rem;
 	flex-grow: 1;
 	flex-shrink: 0;
 	filter: drop-shadow(0 2px 2px black);
 }
-body>nav>nav {
+body>header>nav {
 	display: flex;
 	flex-wrap: nowrap;
 	justify-content: center;
 	align-items: center;
 }
-body>nav>nav>a {
+body>header>nav>a {
 	padding: var(--padding-quarter);
 }
 /* */
@@ -94,6 +104,19 @@ body>main#about {
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
+}
+body>main#about:after {
+	position: absolute;
+	top: 100%;
+	left: 0;
+	right: 0;
+	height: 0;
+	width: 0;
+	content: "";
+	border-bottom: solid var(--padding-half) transparent;
+	border-left: solid 50vw transparent;
+	border-right: solid 50vw #222;
+	border-top: solid var(--padding-half) #222;
 }
 body>main#about>div {
 	position: absolute;
@@ -130,8 +153,8 @@ body>main#about>main>section>p {
 }
 /* */
 body>main#portfolio {
-	height: 70vh;
-	z-index: 55;
+	height: 80vh;
+	z-index: 50;
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
@@ -139,7 +162,7 @@ body>main#portfolio {
 }
 body>main#portfolio>h1 {
 	position: absolute;
-	top: calc((70vh - 1rem - 1.5rem - var(--padding) * 2 - 4rem) / 2);
+	top: calc((100% - 1rem - 1.5rem - var(--padding) * 2 - 4rem) / 2);
 	left: 0;
 	right: 0;
 	z-index: 3;
@@ -158,6 +181,7 @@ body>main#portfolio>main {
 	flex-wrap: nowrap;
 	justify-content: flex-start;
 	align-items: stretch;
+	overflow-x: scroll;
 }
 body>main#portfolio>main>section {
 	flex-grow: 0;
@@ -191,6 +215,41 @@ body>main#portfolio>main>section:after {
 	bottom: 0;
 	background-color: rgba(0, 0, 0, 0.75);
 	z-index: 1;
+}
+body>main#portfolio>nav {
+	position: absolute;
+	z-index: 10;
+	top: 50%;
+	margin-top: calc(0px - var(--padding-half));
+	height: var(--padding-half);
+	width: var(--padding-half);
+	background-color: rgba(0, 0, 0, 0.75);
+	padding: var(--padding-quarter);
+}
+body>main#portfolio>nav.left {
+	left: 0;
+}
+body>main#portfolio>nav.right {
+	right: 0;
+}
+/* */
+body>footer {
+	height: 30vh;
+	z-index: 60;
+}
+body>footer:before {
+	z-index: 4;
+	position: absolute;
+	bottom: 100%;
+	left: 0;
+	right: 0;
+	height: 0;
+	width: 0;
+	content: "";
+	border-top: solid var(--padding-half) transparent;
+	border-left: solid 50vw transparent;
+	border-right: solid 50vw #333;
+	border-bottom: solid var(--padding-half) #333;
 }
 /* */
 .clickable {
