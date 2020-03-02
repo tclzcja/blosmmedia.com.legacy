@@ -11,6 +11,7 @@
 	font-family: system-ui, sans-serif;
 	background-color: #333;
 	color: white;
+	--transition-time: 0.1s;
 }
 body {
 	position: fixed;
@@ -18,4 +19,26 @@ body {
 	left: 0;
 	right: 0;
 	bottom: 0;
+}
+body>nav {
+	display: flex;
+	justify-content: center;
+	align-items: stretch;
+	height: 12rem;
+	padding-top: 2rem;
+}
+body>nav>object {
+	height: 100%;
+	filter: drop-shadow(0 2px 2px black);
+}
+.clickable {
+	transition: transform var(--transition-time);
+	cursor: pointer;
+}
+.clickable:hover {
+	transform: translateY(-0.25rem);
+	cursor: pointer;
+}
+.clickable:active {
+	transform: translateY(0.25rem);
 }
