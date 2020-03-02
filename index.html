@@ -8,14 +8,14 @@
 	<meta name="renderer" content="webkit">
 	<meta name="robots" content="index,follow">
 	<meta name="viewport" content="width=device-width">
-	<link rel="icon" type="image/svg+xml" href="assets/logo-icon.svg">
+	<link rel="icon" type="image/svg+xml" href="assets/logo/logo-icon.svg">
 	<link rel="stylesheet" href="index.css">
 	<script src="node_modules/particles.js/particles.js"></script>
 </head>
 
 <body class="off">
 	<header>
-		<object type="image/svg+xml" data="assets/logo.svg" class="clickable"></object>
+		<object type="image/svg+xml" data="assets/logo/logo.svg" class="clickable"></object>
 		<nav>
 			<a href="#about">关于我们</a>
 			<a href="#portfolio">往期作品</a>
@@ -40,23 +40,23 @@
 	<main id="portfolio">
 		<h1>往期作品</h1>
 		<nav class="clickable left">
-			<object type="image/svg+xml" data="assets/left.svg"></object>
+			<object type="image/svg+xml" data="assets/icon/left.svg"></object>
 		</nav>
 		<nav class="clickable right">
-			<object type="image/svg+xml" data="assets/right.svg"></object>
+			<object type="image/svg+xml" data="assets/icon/right.svg"></object>
 		</nav>
 		<main>
-			<section style="background-image: url(assets/portfolio-avengers-endgame.jpg);">
+			<section style="background-image: url(assets/image/portfolio-avengers-endgame.jpg);">
 				<h1>&nbsp;</h1>
 				<h2>复仇者联盟：终局之战</h2>
 				<p>在《复仇者联盟 3：无限战争》的毁灭性事件过后，复仇者联盟在剩余盟友的帮助下再一次集结，逆转灭霸。</p>
 			</section>
-			<section style="background-image: url(assets/portfolio-surface-studio.jfif);">
+			<section style="background-image: url(assets/image/portfolio-surface-studio.jfif);">
 				<h1>&nbsp;</h1>
 				<h2>微软 Surface Studio</h2>
 				<p>Surface Studio 是一部 28 英寸屏幕的一体机，同时支持多点触控和“笔”操作，可以方便地变形为一台大平板。</p>
 			</section>
-			<section style="background-image: url(assets/portfolio-statue-of-liberty.jfif);">
+			<section style="background-image: url(assets/image/portfolio-statue-of-liberty.jfif);">
 				<h1>&nbsp;</h1>
 				<h2>自由女神像</h2>
 				<p>自由女神像是一个巨大的新古典主义雕塑，现矗立在美国纽约自由岛。</p>
@@ -66,11 +66,21 @@
 	<main id="contact">
 		<h1>联系我们</h1>
 		<form>
-			<input type="">
+			<input type="text" placeholder="您的姓名">
+			<input type="text" placeholder="电话号码">
+			<select>
+				<option>商务请求</option>
+				<option>美食推荐</option>
+				<option>投递简历</option>
+			</select>
+			<input type="submit" value="发送">
 		</form>
 	</main>
 	<footer>
-		<object type="image/svg+xml" data="assets/logo-icon.svg" class="clickable"></object>
+		<object type="image/svg+xml" data="assets/logo/logo-icon.svg" class="clickable"></object>
+		<a href="#about">关于我们</a>
+		<a href="#portfolio">往期作品</a>
+		<a href="#contact">联系我们</a>
 	</footer>
 	<script src="index.js"></script>
 </body>
