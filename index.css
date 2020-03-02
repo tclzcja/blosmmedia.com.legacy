@@ -276,6 +276,19 @@ body>main#contact:before {
 	border-right: solid 50vw #333;
 	border-bottom: solid var(--padding-half) #333;
 }
+body>main#contact:after {
+	position: absolute;
+	top: 100%;
+	left: 0;
+	right: 0;
+	height: 0;
+	width: 0;
+	content: "";
+	border-bottom: solid var(--padding-half) transparent;
+	border-left: solid 50vw transparent;
+	border-right: solid 50vw transparent;
+	border-top: solid var(--padding-half) #333;
+}
 body>main#contact>form {
 	margin-top: var(--padding-half);
 	width: 30%;
@@ -294,8 +307,9 @@ body>main#contact>form>input[type="submit"]:hover {
 }
 /* */
 body>footer {
-	height: 20vh;
-	z-index: 60;
+	padding-top: var(--padding-half);
+	height: 25vh;
+	z-index: 50;
 	background-color: #222;
 	display: flex;
 	flex-wrap: nowrap;
@@ -303,8 +317,36 @@ body>footer {
 	align-items: center;
 }
 body>footer>object {
-	height: 6rem;
+	height: 7rem;
 	width: auto;
+	margin-right: var(--padding-half);
+	margin-left: var(--padding-quarter);
+}
+body>footer>a.text {
+	padding: var(--padding-quarter);
+}
+body>footer>a.icon {
+	height: 2.5rem;
+	width: 2.5rem;
+	margin-left: var(--padding-half);
+	background-color: transparent;
+}
+body>footer>a.icon>object {
+	height: 100%;
+	width: 100%;
+}
+body>footer:after {
+	position: absolute;
+	bottom: 1em;
+	left: 0;
+	right: 0;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	content: "© 2020 Blosmmedia Inc.";
+	margin-left: var(--padding-half);
+	font-size: 0.8rem;
+	opacity: 0.5;
 }
 /* */
 .clickable {
