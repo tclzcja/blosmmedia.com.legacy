@@ -8,13 +8,24 @@
 	<meta name="renderer" content="webkit">
 	<meta name="robots" content="index,follow">
 	<meta name="viewport" content="width=device-width">
+	<link rel="icon" type="image/svg+xml" href="assets/logo-icon.svg">
 	<link rel="stylesheet" href="index.css">
+	<script src="node_modules/particles.js/particles.js"></script>
 </head>
 
-<body>
+<body class="off">
 	<nav>
 		<object type="image/svg+xml" data="assets/logo.svg" class="clickable"></object>
+		<nav>
+			<a href="#about">关于我们</a>
+			<a href="#portfolio">往期作品</a>
+			<a href="#contact">联系我们</a>
+		</nav>
 	</nav>
+	<main id="about">
+		<div id="particles"></div>
+	</main>
+	<script src="index.js"></script>
 </body>
 
 </html>

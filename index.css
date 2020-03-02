@@ -10,9 +10,18 @@
 	font-size: 16px;
 	font-family: system-ui, sans-serif;
 	background-color: #333;
-	color: white;
+	color: orange;
 	--transition-time: 0.1s;
 }
+a {
+	color: inherit;
+	text-decoration: none;
+}
+a:hover {
+	background-color: orange;
+	color: #333;
+}
+/* */
 body {
 	position: fixed;
 	top: 0;
@@ -20,17 +29,63 @@ body {
 	right: 0;
 	bottom: 0;
 }
+body>* {
+	height: 40vh;
+	transition: opacity calc(var(--transition-time) * 5), transform calc(var(--transition-time) * 5);
+	transform: translateY(0);
+}
+body.off>* {
+	opacity: 0;
+	transform: translateY(-10rem);
+}
 body>nav {
 	display: flex;
-	justify-content: center;
+	flex-direction: column;
+	justify-content: stretch;
 	align-items: stretch;
-	height: 12rem;
-	padding-top: 2rem;
+	z-index: 100;
+	position: relative;
+}
+body>nav:after {
+	display: block;
+	position: absolute;
+	top: 100%;
+	left: 0;
+	right: 0;
+	height: 0;
+	width: 0;
+	content: "";
+	border-left: solid 50vw transparent;
+	border-right: solid 50vw transparent;
+	border-top: solid 4rem #333;
 }
 body>nav>object {
-	height: 100%;
+	margin-top: 4rem;
+	margin-bottom: 3rem;
+	height: 12rem;
+	flex-grow: 1;
+	flex-shrink: 0;
 	filter: drop-shadow(0 2px 2px black);
 }
+body>nav>nav {
+	display: flex;
+	flex-wrap: nowrap;
+	justify-content: center;
+	align-items: center;
+}
+body>nav>nav>a {
+	padding: 1rem;
+}
+/* */
+body>main#about {
+	background-color: #222;
+	height: 60vh;
+}
+body>main#about>div {
+	height: 100%;
+	opacity: 0.25;
+}
+/* */
 .clickable {
 	transition: transform var(--transition-time);
 	cursor: pointer;

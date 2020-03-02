@@ -1,0 +1,26 @@
+{
+	"name": "blosmmedia.com",
+	"version": "1.0.0",
+	"description": "",
+	"main": "index.html",
+	"directories": {
+		"doc": "doc"
+	},
+	"dependencies": {
+		"particles.js": "^2.0.0"
+	},
+	"devDependencies": {},
+	"scripts": {
+		"test": "echo \"Error: no test specified\" && exit 1"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/tclzcja/blosmmedia.com.git"
+	},
+	"author": "",
+	"license": "MIT",
+	"bugs": {
+		"url": "https://github.com/tclzcja/blosmmedia.com/issues"
+	},
+	"homepage": "https://github.com/tclzcja/blosmmedia.com#readme"
+}
