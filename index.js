@@ -1,3 +1,8 @@
+NodeList.prototype.addEventListener = function (eventName, eventHandler) {
+	for (let node of this) {
+		node.addEventListener(eventName, eventHandler);
+	}
+}
 window.addEventListener("load", function () {
 	document.body.classList.remove("off");
 })
@@ -18,3 +23,9 @@ document.querySelector("body > main#portfolio > nav.left").addEventListener("cli
 		behavior: "smooth"
 	});
 });
+document.querySelectorAll("body > main#portfolio > main > section > a").addEventListener("mouseenter", function () {
+	this.parentNode.parentNode.parentNode.classList.add("on");
+});
+document.querySelectorAll("body > main#portfolio > main > section > a").addEventListener("mouseleave", function () {
+	this.parentNode.parentNode.parentNode.classList.remove("on");
+})

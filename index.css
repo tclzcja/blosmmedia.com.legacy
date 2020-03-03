@@ -186,13 +186,14 @@ body>main#portfolio {
 }
 body>main#portfolio>h1 {
 	position: absolute;
-	top: calc((100% - 1rem - 1.5rem - var(--padding) * 2 - 4rem) / 2);
+	top: calc((100% - 2.5rem - 1.5rem - var(--padding) * 2 - 4rem) / 2);
 	left: 0;
 	right: 0;
 	z-index: 3;
 	display: flex;
 	justify-content: center;
 	align-items: center;
+	transition: opacity var(--transition-time);
 }
 body>main#portfolio>main {
 	position: absolute;
@@ -227,8 +228,23 @@ body>main#portfolio>main>section>* {
 body>main#portfolio>main>section>h1 {
 	color: transparent;
 }
-body>main#portfolio>main>section>h2 {
-	margin: var(--padding);
+body>main#portfolio>main>section>a {
+	padding: var(--padding-quarter);
+	margin: calc(var(--padding-half) + var(--padding-quarter));
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	font-size: 1.5rem;
+	cursor: pointer;
+	position: static;
+}
+body>main#portfolio>main>section>a:hover {
+	background-color: rgba(0, 0, 0, 0.75);
+}
+body>main#portfolio>main>section>a>object {
+	height: 2em;
+	width: 2em;
+	margin-left: 1em;
 }
 body>main#portfolio>main>section:after {
 	content: "";
@@ -237,7 +253,8 @@ body>main#portfolio>main>section:after {
 	left: 0;
 	right: 0;
 	bottom: 0;
-	background-color: rgba(0, 0, 0, 0.75);
+	background-color: rgba(0, 0, 0, 0.7);
+	transition: background-color var(--transition-time);
 	z-index: 1;
 }
 body>main#portfolio>nav {
@@ -249,12 +266,25 @@ body>main#portfolio>nav {
 	width: var(--padding-half);
 	background-color: rgba(0, 0, 0, 0.75);
 	padding: var(--padding-quarter);
+	transition: opacity var(--transition-time);
 }
 body>main#portfolio>nav.left {
 	left: 0;
 }
 body>main#portfolio>nav.right {
 	right: 0;
+}
+body>main#portfolio.on>nav {
+	opacity: 0;
+}
+body>main#portfolio.on>h1 {
+	opacity: 0;
+}
+body>main#portfolio.on>main>section>p {
+	opacity: 0;
+}
+body>main#portfolio.on>main>section:after {
+	background-color: rgba(0, 0, 0, 0.2);
 }
 /* */
 body>main#contact {
