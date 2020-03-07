@@ -16,7 +16,7 @@
 	--padding: 100px;
 	--padding-half: calc(var(--padding) / 2);
 	--padding-quarter: calc(var(--padding) / 4);
-	--color-black-dark: #222;
+	--color-black: #222;
 	--color-gray: #333;
 	--color-gold: gold;
 	--color-orange: orange;
