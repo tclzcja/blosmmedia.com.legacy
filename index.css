@@ -16,6 +16,10 @@
 	--padding: 100px;
 	--padding-half: calc(var(--padding) / 2);
 	--padding-quarter: calc(var(--padding) / 4);
+	--color-black-dark: #222;
+	--color-gray: #333;
+	--color-gold: gold;
+	--color-orange: orange;
 }
 ::-webkit-scrollbar {
 	height: 0;
@@ -26,15 +30,15 @@ a {
 	text-decoration: none;
 }
 a:hover {
-	background-color: orange;
-	color: #333;
+	background-color: var(--color-gold);
+	color: var(--color-gray);
 }
 h1 {
 	font-size: 4rem;
 }
 h2 {
 	font-size: 1.5rem;
-	color: rgb(255, 218, 128);
+	color: var(--color-gold);
 }
 object {
 	height: 100%;
@@ -55,7 +59,7 @@ input, select {
 	padding-left: 1em;
 	padding-right: 1em;
 	background-color: #222;
-	color: orange;
+	color: var(--color-orange);
 	appearance: none;
 	-webkit-appearance: none;
 	cursor: pointer;
@@ -63,7 +67,7 @@ input, select {
 input[type="button"],
 input[type="submit"] {
 	width: 10rem;
-	border: dashed 1px orange;
+	border: dashed 1px var(--color-orange);
 	border-radius: 1em;
 }
 /* */
@@ -103,7 +107,7 @@ body>header:after {
 	content: "";
 	border-left: solid 50vw transparent;
 	border-right: solid 50vw transparent;
-	border-top: solid var(--padding) #333;
+	border-top: solid var(--padding) var(--color-gray);
 }
 body>header>object {
 	margin-bottom: var(--padding-half);
@@ -131,7 +135,7 @@ body>main {
 /* */
 body>main#about {
 	z-index: 55;
-	background-color: #222;
+	background-color: var(--color-black);
 }
 body>main#about:after {
 	position: absolute;
@@ -143,8 +147,8 @@ body>main#about:after {
 	content: "";
 	border-bottom: solid var(--padding-half) transparent;
 	border-left: solid 50vw transparent;
-	border-right: solid 50vw #222;
-	border-top: solid var(--padding-half) #222;
+	border-right: solid 50vw var(--color-black);
+	border-top: solid var(--padding-half) var(--color-black);
 }
 body>main#about>div {
 	position: absolute;
@@ -171,7 +175,7 @@ body>main#about>main {
 body>main#about>main>section {
 	font-size: 0.9rem;
 	width: 25%;
-	color: rgb(255, 218, 128);
+	color: var(--color-gold);
 	margin-left: 2rem;
 	margin-right: 2rem;
 }
@@ -223,7 +227,7 @@ body>main#portfolio>main>section {
 }
 body>main#portfolio>main>section>* {
 	z-index: 2;
-	color: rgb(255, 218, 128);
+	color: var(--color-gold);
 }
 body>main#portfolio>main>section>h1 {
 	color: transparent;
@@ -303,8 +307,8 @@ body>main#contact:before {
 	content: "";
 	border-top: solid var(--padding-half) transparent;
 	border-left: solid 50vw transparent;
-	border-right: solid 50vw #333;
-	border-bottom: solid var(--padding-half) #333;
+	border-right: solid 50vw var(--color-gray);
+	border-bottom: solid var(--padding-half) var(--color-gray);
 }
 body>main#contact:after {
 	position: absolute;
@@ -317,7 +321,7 @@ body>main#contact:after {
 	border-bottom: solid var(--padding-half) transparent;
 	border-left: solid 50vw transparent;
 	border-right: solid 50vw transparent;
-	border-top: solid var(--padding-half) #333;
+	border-top: solid var(--padding-half) var(--color-gray);
 }
 body>main#contact>form {
 	margin-top: var(--padding-half);
@@ -331,16 +335,16 @@ body>main#contact>form>input[type="submit"] {
 	transition: all var(--transition-time);
 }
 body>main#contact>form>input[type="submit"]:hover {
-	background-color: orange;
-	color: #333;
-	border: solid 1px orange;
+	background-color: var(--color-orange);
+	color: var(--color-gray);
+	border: solid 1px var(--color-orange);
 }
 /* */
 body>footer {
 	padding-top: var(--padding-half);
 	height: 25vh;
 	z-index: 50;
-	background-color: #222;
+	background-color: var(--color-black);
 	display: flex;
 	flex-wrap: nowrap;
 	justify-content: center;
