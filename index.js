@@ -9,6 +9,14 @@ window.addEventListener("load", function () {
 window.particlesJS.load('particles', 'config/particles.json', function () {
 	console.log('callback - particles.js config loaded');
 });
+document.querySelector("body > header > header > select").value = navigator.language;
+document.querySelector("body > header > header > select").addEventListener("change", function () {
+	window.dispatchEvent(new CustomEvent("LANGUAGE", {
+		detail: {
+			"lang": this.value
+		}
+	}));
+});
 document.querySelector("body > main#portfolio > nav.right").addEventListener("click", function () {
 	document.querySelector("body > main#portfolio > main").scrollBy({
 		top: 0,

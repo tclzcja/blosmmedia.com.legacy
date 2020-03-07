@@ -64,6 +64,10 @@ input, select, textarea {
 	-webkit-appearance: none;
 	cursor: pointer;
 }
+select>option {
+	background-color: white;
+	color: black;
+}
 textarea {
 	height: 10rem;
 	resize: none;
@@ -129,6 +133,31 @@ body>header>nav {
 }
 body>header>nav>a {
 	padding: var(--padding-quarter);
+}
+body>header>header {
+	position: absolute;
+	top: 0;
+	right: 0;
+	display: flex;
+	flex-wrap: nowrap;
+	justify-content: flex-end;
+	align-items: center;
+	padding: 1rem;
+	opacity: 0.5;
+	transition: opacity var(--transition-time);
+}
+body>header>header:hover {
+	opacity: 1;
+}
+body>header>header>select {
+	background-color: transparent;
+	width: auto;
+	color: var(--color-gold);
+	padding-right: 0.5rem;
+}
+body>header>header>object {
+	height: 2.5rem;
+	width: 2.5rem;
 }
 /* */
 body>main {

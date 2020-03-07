@@ -17,10 +17,17 @@
 	<header>
 		<object type="image/svg+xml" data="assets/logo/logo.svg" class="clickable"></object>
 		<nav>
-			<a href="#about">关于我们</a>
-			<a href="#portfolio">往期作品</a>
-			<a href="#contact">联系我们</a>
+			<a href="#about" data-i18n-textContent="about">关于我们</a>
+			<a href="#portfolio" data-i18n-textContent="portfolio">往期作品</a>
+			<a href="#contact" data-i18n-textContent="contact">联系我们</a>
 		</nav>
+		<header>
+			<select dir="rtl">
+				<option value="en">English</option>
+				<option value="zh-CN">简体中文</option>
+			</select>
+			<object type="image/svg+xml" data="assets/icon/globe.svg"></object>
+		</header>
 	</header>
 	<main id="about">
 		<div id="particles"></div>
@@ -76,15 +83,15 @@
 		<h1>联系我们</h1>
 		<form>
 			<select>
-				<option>商务请求</option>
+				<option data-i18n-textcontent="business-request"></option>
 				<option>美食推荐</option>
 				<option>投递简历</option>
 			</select>
-			<input type="text" placeholder="您的姓名">
-			<input type="text" placeholder="电话号码">
-			<input type="email" placeholder="您的邮箱">
-			<textarea placeholder="信息"></textarea>
-			<input type="submit" value="发送">
+			<input type="text" data-i18n-attribute="placeholder/name">
+			<input type="text" data-i18n-attribute="placeholder/phone">
+			<input type="email" data-i18n-attribute="placeholder/email">
+			<textarea data-i18n-attribute="placeholder/message"></textarea>
+			<input type="submit" data-i18n-attribute="value/submit">
 		</form>
 	</main>
 	<footer>
@@ -105,6 +112,7 @@
 			<object type="image/svg+xml" data="assets/icon/wechat.svg"></object>
 		</a>
 	</footer>
+	<script src="i18n.js"></script>
 	<script src="index.js"></script>
 </body>
 
