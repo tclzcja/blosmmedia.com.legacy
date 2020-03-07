@@ -1,2 +1,2 @@
-# blosmmedia.com.legacy
-A website demo for blosmmedia.com
+# blosmmedia.com company website
+This is a website demo I made for blosmmedia.com, a media company locates at Macau, China.
