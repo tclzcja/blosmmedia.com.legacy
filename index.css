@@ -10,14 +10,14 @@
 :root {
 	font-size: 16px;
 	font-family: system-ui, sans-serif;
-	background-color: #333;
+	background-color: var(--color-black);
 	color: orange;
 	--transition-time: 0.1s;
 	--padding: 100px;
 	--padding-half: calc(var(--padding) / 2);
 	--padding-quarter: calc(var(--padding) / 4);
-	--color-black: #222;
-	--color-gray: #333;
+	--color-black: black;
+	--color-gray: #111;
 	--color-gold: gold;
 	--color-orange: orange;
 }
@@ -96,6 +96,7 @@ body>header {
 	align-items: stretch;
 	position: relative;
 	z-index: 100;
+	background-color: var(--color-black);
 }
 body>header:after {
 	position: absolute;
@@ -107,7 +108,7 @@ body>header:after {
 	content: "";
 	border-left: solid 50vw transparent;
 	border-right: solid 50vw transparent;
-	border-top: solid var(--padding) var(--color-gray);
+	border-top: solid var(--padding) var(--color-black);
 }
 body>header>object {
 	margin-bottom: var(--padding-half);
@@ -135,7 +136,7 @@ body>main {
 /* */
 body>main#about {
 	z-index: 55;
-	background-color: var(--color-black);
+	background-color: var(--color-gray);
 }
 body>main#about:after {
 	position: absolute;
@@ -147,8 +148,8 @@ body>main#about:after {
 	content: "";
 	border-bottom: solid var(--padding-half) transparent;
 	border-left: solid 50vw transparent;
-	border-right: solid 50vw var(--color-black);
-	border-top: solid var(--padding-half) var(--color-black);
+	border-right: solid 50vw var(--color-gray);
+	border-top: solid var(--padding-half) var(--color-gray);
 }
 body>main#about>div {
 	position: absolute;
@@ -295,6 +296,7 @@ body>main#contact {
 	padding-top: var(--padding);
 	padding-bottom: var(--padding);
 	z-index: 60;
+	background-color: var(--color-gray);
 }
 body>main#contact:before {
 	z-index: 4;
@@ -336,7 +338,7 @@ body>main#contact>form>input[type="submit"] {
 }
 body>main#contact>form>input[type="submit"]:hover {
 	background-color: var(--color-orange);
-	color: var(--color-gray);
+	color: var(--color-black);
 	border: solid 1px var(--color-orange);
 }
 /* */
